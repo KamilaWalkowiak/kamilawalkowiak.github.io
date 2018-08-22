@@ -1,79 +1,123 @@
 .page {
     display: grid;
-    grid-template-columns: 16% 1fr 8% 2fr 16%;
-    grid-template-rows: 400px 1fr 250px;
+    grid-template-columns: 8% 1fr 12% 2fr 8%;
+    grid-template-rows: 380px 1fr 300px;
     min-height: 100vh;
 }
 
 header {
+    display: grid;
     /*align-items: center;*/
-    /*justify-items: center;*/
-    grid-row:    1 / 2;
+    justify-items: center;
+    grid-row: 1 / 2;
     grid-column: 2 / 3;
+    padding-top: 2rem;
 }
 
 footer {
+    display: grid;
     /*align-items: center;*/
-    /*justify-items: center;*/
-    grid-row:    3 / 4;
+    justify-items: center;
+    grid-row: 3 / 4;
     grid-column: 2 / 3;
 }
 
 nav {
-    grid-row:    2 / 3;
+    display: grid;
+    /*align-items: center;*/
+    justify-items: center;
+    grid-row: 2 / 3;
     grid-column: 2 / 3;
+    /*padding-top: 3rem;*/
 }
 
 article {
     display: grid;
-    grid-template-rows: 400px 1fr 250px;
+    grid-template-rows: 380px 1fr 300px;
     min-height: 100vh;
 }
 
 h2 {
-    grid-row:    1 / 2;
+    grid-row: 1 / 2;
+    padding-top: 2rem;
+    align-self: end;
 }
 
 p {
-    grid-row:    2 / 3;
+    grid-row: 2 / 3;
+    margin: 0;
 }
 
-.buttons {
-    grid-row:    3 / 4;
+.about_me_content {
+    grid-row: 2 / 3;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
+    list-style: none;
+}
+
+footer > ul {
+    display: grid;
+    grid-auto-flow: column;
+    padding-bottom: 7rem;
 }
 
 li {
-    padding: 5px;
+    padding: 0 5px;
+}
+
+a {
+    all: unset;
 }
 
 main {
-    grid-row:    1 / 4;
+    grid-row: 1 / 4;
     grid-column: 4 / 5;
 }
 
-
 .profile_header {
-    /*grid-column: 2;*/
-    /*grid-row: 1;*/
-    /*align-self: center;*/
-    /*justify-self: center;*/
+    display: grid;
+    justify-items: center;
+    margin-top: -30px;
 }
 
 .profile_photo {
-    width: 25%;
-    /*object-fit: cover;*/
+    width: 70%;
     border-radius: 50%;
-    /*grid-column: 1;*/
-    /*grid-row: 1;*/
-    /*align-self: center;*/
-    /*justify-self: center;*/
+    margin-bottom: -30px;
 }
+
+.items_center {
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    grid-auto-flow: column;
+}
+
+.about_me_buttons {
+    grid-row: 3 / 4;
+}
+
+button {
+    margin-bottom: 7rem;
+}
+
+.contact_me {
+    justify-self: end;
+}
+
+.download_resume {
+justify-self: start;
+
+}
+
+.my_title {
+    margin-top: -30px;
+}
+
+.my_name {
+    margin: 0;
+}
+
