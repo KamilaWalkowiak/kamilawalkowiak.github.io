@@ -1,79 +1,182 @@
 .page {
-    display: grid;
-    grid-template-columns: 16% 1fr 8% 2fr 16%;
-    grid-template-rows: 400px 1fr 250px;
-    min-height: 100vh;
+    font-family: Roboto; /*TODO add second font*/
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
 }
 
 header {
-    /*align-items: center;*/
-    /*justify-items: center;*/
-    grid-row:    1 / 2;
-    grid-column: 2 / 3;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 160px 30px 20px 400px 80px;
+    width: 24%;
+    padding-left: 8%;
 }
 
-footer {
-    /*align-items: center;*/
-    /*justify-items: center;*/
-    grid-row:    3 / 4;
-    grid-column: 2 / 3;
+.profile_photo {
+    max-width: 100%;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: grid;
+    justify-self: center;
+    grid-row: 1 / 2;
+    margin-top: 0.5rem;
+    padding: 2px;
+    border: solid 1px #0f535d;
+}
+
+.my_name {
+    display: grid;
+    justify-items: center;
+    grid-row: 2 / 3;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.my_title {
+    display: grid;
+    justify-items: center;
+    grid-row: 3 / 4;
+    margin-top: 0;
+    font-size: 0.9rem;
+
 }
 
 nav {
-    grid-row:    2 / 3;
-    grid-column: 2 / 3;
+    display: grid;
+    justify-items: stretch;
+    grid-row: 4 / 5;
+    margin-top: 2rem;
+}
+
+main {
+    width: 52%;
+    padding-right: 8%;
 }
 
 article {
     display: grid;
-    grid-template-rows: 400px 1fr 250px;
-    min-height: 100vh;
+    grid-template-rows: 160px 30px 20px 400px 80px;
+    height: 100vh;
 }
 
 h2 {
-    grid-row:    1 / 2;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    grid-row: 2 / 3;
+    font-weight: lighter;
+    color: #cd6c95;
+
 }
 
 p {
-    grid-row:    2 / 3;
+    grid-row: 4 / 5;
+    margin-top: calc(2rem - 8px);
+    line-height: 2rem;
+    font-size: 1.1rem;
 }
 
-.buttons {
-    grid-row:    3 / 4;
+.about_me_buttons {
+    grid-row: 5 / 6;
+    align-self: start;
+}
+
+.button {
+    padding: 8px;
+    border-radius: 2px;
+    border: 2px solid #cd6c95;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #cd6c95;
+}
+
+.download_resume {
+    margin-right: 2rem;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-li {
-    padding: 5px;
+nav > ul > li {
+    text-align: center;
+    margin: 0 0 8px 0;
 }
 
-main {
-    grid-row:    1 / 4;
-    grid-column: 4 / 5;
+nav > ul > li > a:hover {
+    animation-name: border_color, color;
+    animation-duration: 1.2s;
+    border-right: solid 4px #cd6c95;
+    color: #cd6c95;
 }
 
-
-.profile_header {
-    /*grid-column: 2;*/
-    /*grid-row: 1;*/
-    /*align-self: center;*/
-    /*justify-self: center;*/
+nav > ul > li > a {
+    display: block;
+    padding: 24px;
+    border-radius: 2px;
+    border-right: solid 4px rgba(0, 0, 0, 0.67);
 }
 
-.profile_photo {
-    width: 25%;
-    /*object-fit: cover;*/
-    border-radius: 50%;
-    /*grid-column: 1;*/
-    /*grid-row: 1;*/
-    /*align-self: center;*/
-    /*justify-self: center;*/
+ul.social_media {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: center;
+    align-self: start;
+    grid-row: 5 / 6;
+}
+
+ul.social_media > li {
+    padding: 0 8px;
+}
+
+.fab {
+    font-size: 1.5rem;
+}
+
+@keyframes color {
+    from {
+        color: black;
+    }
+    to {
+        color: #cd6c95;
+    }
+}
+
+@keyframes border_color {
+    from {
+        border-right: solid 4px rgba(0, 0, 0, 0.67);
+    }
+    to {
+        border-right: solid 4px #cd6c95;
+    }
+}
+
+.fab:hover {
+    animation-name: color;
+    animation-duration: 1.2s;
+    color: #cd6c95;
+    /*opacity: 0.9;*/
+}
+
+a {
+    all: unset;
+}
+
+br {
+    line-height: 2.8rem;
+}
+
+.card-1 {
+    box-shadow: 0 1px 0.2px rgba(0, 0, 0, 0.08), 0 1px 0.2px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-1:hover {
+    box-shadow: 0 1.5px 1px rgba(0, 0, 0, 0.22), 0 1.5px 1px rgba(0, 0, 0, 0.22);
 }
