@@ -59,24 +59,76 @@ header {
 } */
 
 .my_name {
-    background: linear-gradient(to left, #b422e0 0%, #04685a 100%);
+    /* background: linear-gradient(to left, #b422e0 0%, #04685a 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
+    color: white;
+    text-shadow:
+      -2px -2px 0 #D0A43D,
+       0   -1px 0 #D0A43D,
+       1px -1px 0 #D0A43D,
+       1px  0   0 #D0A43D,
+       1px  1px 0 #D0A43D,
+       0    1px 0 #D0A43D,
+      -1px  1px 0 #D0A43D,
+      -1px  0   0 #D0A43D;
 }
 
 .my_title {
-    background: linear-gradient(to left, #04685a 0%, #b422e0 100%);
+    /* background: linear-gradient(to left, #04685a 0%, #b422e0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-left: 8px;
-
+    margin-left: 8px; */
+    color: white;
+    text-shadow:
+      -2px -2px 0 #D0A43D,
+       0   -1px 0 #D0A43D,
+       1px -1px 0 #D0A43D,
+       1px  0   0 #D0A43D,
+       1px  1px 0 #D0A43D,
+       0    1px 0 #D0A43D,
+      -1px  1px 0 #D0A43D,
+      -1px  0   0 #D0A43D;
 }
 
+/* .hi {
+    font-size: 14rem;
+    font-weight: bold;
+    color: white;
+    text-shadow:
+      -2px -2px 0 #D0A43D,
+       0   -1px 0 #D0A43D,
+       1px -1px 0 #D0A43D,
+       1px  0   0 #D0A43D,
+       1px  1px 0 #D0A43D,
+       0    1px 0 #D0A43D,
+      -1px  1px 0 #D0A43D,
+      -1px  0   0 #D0A43D;
+} */
+
+.normal_text {
+    font-size: 1.1rem;
+}
+
+h1 > span {
+}
+/* 
+.rest_of_the_headline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} */
+
 h1 {
-    font-size: 2.4rem;
-    font-weight: lighter;
+    font-size: 3rem;
+    font-weight: bold;
     font-family: Roboto;
     color: #3D3780;
+    display: flex;
+    flex-direction: row;
+}
+.arrow {
+    height: 300px;
 }
 
 article {
@@ -110,8 +162,9 @@ p > a > span:hover {
 }
 
 .button:hover {
-    box-shadow: none;
-    color: white;
+    /* box-shadow: none;
+    color: white; */
+    background-color:rgba(250, 250, 250, 0.8);
 }
 
 .button {
@@ -121,14 +174,16 @@ p > a > span:hover {
     border-radius: 4px;
     font-size: 1.1rem;
     font-family: inherit;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    color: #b422e0;
-    box-shadow: 2px 1000px 1px #fff inset;
-    border: solid 2.5px transparent;
+    /* background-origin: border-box;
+    background-clip: content-box, border-box; */
+    /* color: #b422e0;
+    box-shadow: 2px 1000px 1px #fff inset; */
+    /* border: solid 2.5px transparent; */
+    background-color:rgba(250, 250, 250, 0.55);
     text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-
+/* 
 .download_resume {
     border-image: linear-gradient(to left, #b422e0 0%, #04685a 100%) 1;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #04685a, #b422e0);
@@ -137,7 +192,7 @@ p > a > span:hover {
 .contact_me {
     border-image: linear-gradient(to left, #04685a 0%, #b422e0 100%) 1;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #b422e0, #04685a);
-}
+} */
 
 ul {
     margin: 0;
